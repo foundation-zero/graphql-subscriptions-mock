@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    // Base Options recommended for all projects
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "outDir": "./dist",
+    "verbatimModuleSyntax": true,
+    // Enable strict type checking so you can catch bugs early
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    // We are not transpiling, so preserve our source code and do not emit files
+    "module": "preserve",
+    "noEmit": true,
+    // Include the DOM types
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@lib/*": ["./lib/*"],
+      "@types": ["lib/types"],
+      "@utils/*": ["./lib/utils/*"]
+    }
+  },
+
+  "include": [
+    "www/*.js",
+    "tsup.config.ts",
+    "./lib/**/*.ts",
+    "lib/types/**/*.ts",
+    "tests/**/*.ts",
+    "vitest.config.ts",
+    "vite.config.ts",
+    "scripts/**/*.ts"
+, "www/socket-test.js"  ],
+  "exclude": ["node_modules"]
+}
