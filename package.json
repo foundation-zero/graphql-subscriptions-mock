@@ -1,7 +1,12 @@
 {
-  "name": "graphql-subs-mock",
+  "name": "@foundation-zero/graphql-subscriptions-mock",
   "version": "1.0.1",
-  "description": "",
+  "description": "A lightweight mocking library for GraphQL subscriptions with built-in Playwright testing support.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foundation-zero/graphql-subscriptions-mock.git"
+  },
+  "homepage": "https://github.com/foundation-zero/graphql-subscriptions-mock#readme",
   "exports": {
     ".": {
       "import": {
@@ -33,14 +38,30 @@
     "prepare": "tsup",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "lint": "eslint . --ext .ts,.tsx",
-    "serve": "node www/serve.mjs"
+    "serve": "node www/serve.mjs",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "graphql",
+    "subscriptions",
+    "mock",
+    "playwright",
+    "testing",
+    "websockets"
+  ],
+  "author": {
+    "name": "Foundation Zero",
+    "email": "npm@foundationzero.org"
+  },
+  "bugs": {
+    "url": "https://github.com/foundation-zero/graphql-subscriptions-mock/issues"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.54.1",
     "@types/node": "^24.0.15",
+    "clean-package": "^2.2.0",
     "eslint": "^9.31.0",
     "eslint-config-love": "^121.0.0",
     "eslint-config-prettier": "^10.1.8",
